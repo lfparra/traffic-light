@@ -1,8 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+
+const TrafficLight = props => {
+  return (
+    <div className="semaforo">
+        <div className="red-light"></div>
+        <div className="yellow-light"></div>
+        <div className="green-light"></div>
+    </div>
+  )
+}
+
+
+
+const App = () => {
+  return (
+    <>
+    <h2>Traffic Light</h2>
+    <TrafficLight />
+    <TrafficLight />
+    </>
+  )
+}
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,7 +31,3 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
